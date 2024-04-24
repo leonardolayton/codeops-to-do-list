@@ -1,9 +1,12 @@
+
+
 const inputBox = document.getElementById("input-box");
+const dueDate = document.getElementById("due-date");
 const listContainer = document.getElementById("list-container");
 
 function addTask(){
     if(inputBox.value === ''){
-        alert("No task has been added!")
+        alert("No Text")
     }
     else {
         let li = document.createElement("li");
@@ -14,6 +17,22 @@ function addTask(){
         li.appendChild(span);
     }
     inputBox.value = "";
+    saveData();
+}
+
+function addDate(){
+    if(dueDate.value === ''){
+        alert("No Date")
+    }
+    else {
+        let li = document.createElement("li");
+        li.innerHTML = dueDate.value;
+        listContainer.appendChild(li);
+        let span = document.createElement("span");
+        span.innerHTML = "\u00d7";
+        li.appendChild(span);
+    }
+    dueDate.value = "";
     saveData();
 }
 
