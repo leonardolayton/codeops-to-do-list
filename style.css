@@ -61,11 +61,10 @@ input::placeholder{
     color: #94bbe9;
 }
 
-input[type="date"]::-webkit-inner-spin-button,
-input[type="date"]::-webkit-calendar-picker-indicator {
-    display: none;
-    -webkit-appearance: none;
-}
+::-webkit-calendar-picker-indicator {
+    background-image: url('./img/calendar.png');
+    background-size: 16px;
+  }
 
 
 .date {
